@@ -20,12 +20,9 @@ import jp.co.rakus.domain.User;
 @Transactional
 public class UserDao {
 	
-	/**
-	 * 
-	 */
 	private static final RowMapper<User> USER_ROW_MAPPER = (rs,i) ->{
 		User user = new User();
-		user.setId(rs.getString("id"));
+		user.setId(rs.getInt("id"));
 		user.setName(rs.getString("name"));
 		user.setAge(rs.getString("age"));
 		user.setAddress(rs.getString("address"));
@@ -36,7 +33,7 @@ public class UserDao {
 	private NamedParameterJdbcTemplate template;
 	
 	/**
-	 * 一件検索を行う.
+	 * 主キー検索を行う.
 	 * 
 	 * @param id id
 	 * @return 検索結果（ユーザー情報）
