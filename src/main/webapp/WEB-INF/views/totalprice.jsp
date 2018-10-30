@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,9 +10,9 @@
 <h2>合計金額</h2>
 
 ■税抜き価格<br>
-<c:out value="${total}" />円<br>
+<fmt:formatNumber value="${total}" pattern="###,###" />円<br>
 ■税込み価格<br>
-<c:out value="${totalTax}" />円
+<fmt:formatNumber value="${totalTax}" pattern="###,###" />円
 
 </body>
 </html>
