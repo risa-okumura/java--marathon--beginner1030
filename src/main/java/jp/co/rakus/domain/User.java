@@ -1,14 +1,17 @@
 package jp.co.rakus.domain;
 
 /**
- * userドメイン.
+ * ユーザ情報を表すドメイン.
+ * 
  * @author OkumuraRisa
  *
  */
 public class User {
-	
+	/** 名前 */
 	private String name;
+	/** 年齢 */
 	private String age;
+	/** 住所 */
 	private String address;
 	
 	public String getName() {

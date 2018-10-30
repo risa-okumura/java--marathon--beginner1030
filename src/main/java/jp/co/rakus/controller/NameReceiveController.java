@@ -15,7 +15,7 @@ public class NameReceiveController {
 	
 	/**
 	 * 入力画面を表示.
-	 * @return 名前登録.
+	 * @return 名前登録
 	 */
 	@RequestMapping("/toInput")
 	public String toInput() {

@@ -8,6 +8,7 @@ import jp.co.rakus.domain.User;
 
 /**
  * フォームで入力した名前、住所、年齢を表示させるコントローラー.
+ * 
  * @author risa.okumura
  *
  */
@@ -17,6 +18,7 @@ public class UserInfoController {
 	
 	/**
 	 * 入力画面を表示.
+	 * 
 	 * @return 入力画面
 	 */
 	@RequestMapping("/toInput")
@@ -26,8 +28,9 @@ public class UserInfoController {
 	
 	/**
 	 * 出力画面を表示.
+	 * 
 	 * @param name 名前
-	 * @param age　年営
+	 * @param age　年齢
 	 * @param address　住所
 	 * @param model　モデル
 	 * @return　出力画面

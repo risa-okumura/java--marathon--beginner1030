@@ -7,7 +7,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
- * 計算関連のコントローラー
+ * 計算関連のコントローラー.
+ * 
  * @author risa.okumura
  *
  */
@@ -20,6 +21,7 @@ public class CalcController {
 	
 	/**
 	 * 入力画面を表示.
+	 * 
 	 * @return 数字入力
 	 * 
 	 */
@@ -30,13 +32,13 @@ public class CalcController {
 	
 	/**
 	 * 入力した数字および計算結果を表示.
-	 * @param session セッションスコープに対応したmodel
+	 * 
 	 * @param num1　入力された数字１
 	 * @param num2　入力された数字2
 	 * @return　表示画面
 	 */
 	@RequestMapping("/inputvalue")
-	public String inputvalue(HttpSession session,String num1, String num2) {
+	public String inputvalue(String num1, String num2) {
 		int number1 = Integer.parseInt(num1);
 		int number2 = Integer.parseInt(num2);
 		int answer = number1 * number2;
@@ -48,6 +50,10 @@ public class CalcController {
 		return "outputvalue";
 	}
 	
+	/**
+	 * 出力画面を表示.
+	 * @return 出力画面
+	 */
 	@RequestMapping("/outputvalue")
 	public String outputvalue() {
 		return "outputvalue2";
