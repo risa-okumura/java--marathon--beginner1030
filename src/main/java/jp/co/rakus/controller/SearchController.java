@@ -2,6 +2,7 @@ package jp.co.rakus.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -9,13 +10,14 @@ import jp.co.rakus.domain.User;
 import jp.co.rakus.repository.UserDao;
 
 /**
- * ID（主キー）検索を表示するコントローラー
+ * ID（主キー）検索を表示するコントローラー.
  * 
  * @author risa.okumura
  *
  */
 @Controller
 @RequestMapping("/search")
+@Transactional
 public class SearchController {
 	
 	@Autowired

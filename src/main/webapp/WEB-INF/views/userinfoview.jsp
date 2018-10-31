@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<h2>詳細情報</h2>
 名前：<c:out value="${user.name}" />様<br>
 年齢：<c:out value="${user.age}" />歳<br>
 住所：<c:out value="${user.address}" />

@@ -17,7 +17,7 @@ import jp.co.rakus.domain.User;
  *
  */
 @Repository
-@Transactional
+
 public class UserDao {
 	
 	private static final RowMapper<User> USER_ROW_MAPPER = (rs,i) ->{
